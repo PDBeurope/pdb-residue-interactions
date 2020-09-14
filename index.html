@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <!-- d3.js dependency script -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@5.9.2"></script>
+    
+    <!-- PDB Residue Interactions JS -->
+    <script type="text/javascript" src="build/pdb-residue-interactions-plugin.js"></script>
+
+    <style>
+        #pdb-residue-interactions {
+            position: relative;
+            width: 300px;
+            height: 315px;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <h4>PDB Residue Interactions Plugin Demo</h4>
+    
+    <!-- PDB Residue Interactions container -->
+    <div id="pdb-residue-interactions"></div>
+    
+    <script>
+      //Create plugin instance
+      var pluginInstance = new PdbResidueInteractionsPlugin();
+
+      //Get element from HTML/Template to place the view
+      var viewContainer = document.getElementById('pdb-residue-interactions');
+  
+      //Call render method to display the 3D view
+      pluginInstance.render(viewContainer, '1cbs');
+      
+    </script>
+  </body>
+
+</html>

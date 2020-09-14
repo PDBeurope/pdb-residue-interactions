@@ -1,0 +1,54 @@
+{
+  "name": "pdb-residue-interactions",
+  "version": "2.0.0",
+  "description": "A component based on the residue contacts viewer in Protein Contacts Atlas. It displays, in graphical form, the atomic contacts between each of the secondary structural elements (helices and sheets) in a protein.",
+  "keywords": [
+    "BioJS",
+    "PDB web-component",
+    "PDB Residue Interactions",
+    "PDBe",
+    "Protein Contacts Atlas"
+  ],
+  "homepage": "https://github.com/PDBeurope/pdb-residue-interactions#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PDBeurope/pdb-residue-interactions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PDBeurope/pdb-residue-interactions/issues"
+  },
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1",
+    "build": "npm run build-tsc && npm run build-webpack && npm run bundle-webcomponent",
+    "build-tsc": "tsc",
+    "build-webpack": "webpack --mode development",
+    "serve": "http-server -p 1338",
+    "bundle-webcomponent": "gulp"
+  },
+  "author": {
+    "name": "Mandar Deshpande",
+    "email": "mandar@ebi.ac.uk"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/runtime": "^7.7.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "d3": "^5.15.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.9",
+    "http-server": "^0.12.3",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@types/d3": "^5.0.1",
+    "lit-element": "^2.2.1"
+  }
+}
